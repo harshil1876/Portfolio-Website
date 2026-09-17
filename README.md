@@ -1,6 +1,6 @@
 # Professional Next.js Portfolio - Harshil Patel
 
-A state-of-the-art, interactive portfolio website built with **Next.js 15+**, **TypeScript**, and **Framer Motion**. This project features a unique "Bento" design, a dynamic "Snake" journey timeline, a cascading "Showcase" slider, and an AI-powered personal assistant.
+A state-of-the-art, interactive portfolio website built with **Next.js 15+**, **TypeScript**, and **Framer Motion**. This project features a unique "Bento" design, a cascading "Showcase" slider, and an AI-powered personal assistant.
 
 ---
 
@@ -16,13 +16,11 @@ graph TD
     A --> E[Footer]
     
     C --> F[Bento Profile]
-    C --> G[Snake Journey]
     C --> H[Showcase Slider]
     C --> I[Contact Form]
     
     B --> J[Command Palette]
     
-    G --> K[Milestone System]
     H --> L[Horizontal Scroll Rows]
     L --> M[Detail Pages - Projects/Certs/Achiev/Lead]
     
@@ -34,25 +32,19 @@ graph TD
 
 ## 🌟 Key Features & Algorithms
 
-### 1. Unified Snake Journey
-A continuous, multi-row SVG timeline that maps milestones onto a snake-like path.
-- **Algorithm**: The path is calculated based on `NUM_ROWS` and `ROW_HEIGHT`. It uses a dynamic SVG string builder to create the "U-turns" at the end of each row.
-- **Milestone Mapping**: Milestones are positioned using an absolute "Row Unit" system, ensuring they stay perfectly aligned even if the road length changes.
-- **Interactive Car**: A motion-tracked "Car" indicator follows the user's scroll progress using `useScroll` and `useTransform`.
-
-### 2. Cascading Showcase Slider
+### 1. Cascading Showcase Slider
 A horizontal-in-vertical scroll experience that separates content into distinct "territories" (Projects, Achievements, etc.).
 - **Sticky Locking**: Each category row "sticks" to the top of the viewport using `sticky` positioning and `h-[250vh]` containers.
 - **Transformation**: Vertical scroll progress is mapped directly to horizontal translation (`x: -100%`) using Framer Motion.
 - **Vertical progress Map**: A persistent navigation spine on the left tracks the category progress as you scroll.
 
-### 3. AI Personal Assistant (Gemini)
+### 2. AI Personal Assistant (Gemini)
 A built-in chatbot that knows everything about Harshil's professional life.
 - **Context Injection**: The `buildChatContext()` utility scrapes the entire `data.ts` to create a dense system prompt for the AI.
 - **Model**: Powered by **Gemini 2.5 Flash** for high-speed, intelligent responses.
 - **Streaming UI**: Features a sleek, floating widget with message history and navigation commands (e.g., "Take me to projects").
 
-### 4. Interactive Certification Vault
+### 3. Interactive Certification Vault
 A dedicated system for viewing professional credentials.
 - **A4 Optimization**: Embedded PDF viewers are forced to a **1.414:1 aspect ratio** to eliminate internal scrollbars for certificates.
 - **Course Detail Sub-pages**: Every item has its own deep-linkable page with metadata, outcomes, and LinkedIn social proof.
@@ -94,8 +86,10 @@ A dedicated system for viewing professional credentials.
 
 ## 🚀 Recent Improvements
 Recent iterations have significantly refined the portfolio:
+- **Clean Aesthetic**: Removed the original roadmap section to create a cleaner, more professional single-page landing experience focused directly on projects and skills.
+- **AI Personal Agent**: Added a new flagship project detailing a self-hosted AI automation system built with n8n, Google Gemini, and PostgreSQL.
 - **EmailJS Integration**: The contact form is fully functional, sending real emails directly to the owner.
-- **Profile Rebrand**: Renamed the core bio section to "Profile" for better user identification.
+- **Profile Rebrand**: Updated bio, increased CGPA to 9.15, and expanded the Core Tech Stack to include AI Automation and n8n.
 - **Responsive Navbar**: The "Quick Navigate" search bar is centered and enlarged for better accessibility.
 - **Social Proofing**: Integrated "View LinkedIn Post" buttons on all detail pages.
 
