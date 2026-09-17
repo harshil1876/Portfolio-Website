@@ -6,7 +6,7 @@ export const personalInfo = {
   name: "Harshil Patel",
   headline: "AI & Data Science Engineer | Building Intelligent Systems",
   summary:
-    "Final-year Information Technology student (CGPA 9.0) specializing in AI-driven analytics, machine learning, data science solutions, and backend systems development. Demonstrated leadership by organizing large-scale technical initiatives and coordinating cross-functional teams.",
+    "Information Technology graduate from SVIT Vasad (CGPA 9.15) specializing in AI-driven analytics, machine learning, Generative AI, AI automation, and full-stack development. Focused on building intelligent platforms and workflows to solve real business problems.",
   location: "Vadodara, Gujarat, India",
   email: "harshilpatel1876@gmail.com",
   phone: "+91 6354252779",
@@ -26,20 +26,20 @@ export const stats = [
   { label: "Projects Built", value: "5+" },
   { label: "Technologies", value: "10+" },
   { label: "Experience", value: "1+ yr" },
-  { label: "CGPA", value: "9.00" },
+  { label: "CGPA", value: "9.15" },
 ];
 
 export const aboutText = [
-  "I'm a final-year Information Technology student at SVIT Vasad with a CGPA of 9.00, specializing in AI-driven analytics, machine learning, and full-stack development. My work spans from AI-powered healthcare platforms funded by SSIP grants to enterprise financial intelligence systems at Gujarat Alkalies and Chemicals Ltd.",
-  "I thrive at the intersection of engineering and analytics — building scalable, intelligent platforms that deliver measurable impact. From designing RAG pipelines for AI-CFO automation software to architecting a healthcare platform that improved health assessment efficiency by 70%, I focus on creating systems that solve real business problems.",
-  "Beyond technical work, I'm an active leader — co-heading major events like IPL Auction at Prakarsh'25 (150+ participants) and the BuzzTech startup event at SVIT. I believe great technology is built by collaborative teams with a shared vision for impact.",
+  "I'm an Information Technology graduate from SVIT Vasad with a CGPA of 9.15, specializing in AI-driven analytics, machine learning, Generative AI, AI automation, and full-stack development. My work spans AI-powered healthcare platforms, enterprise financial intelligence systems at Gujarat Alkalies and Chemicals Ltd., and AI-driven automation solutions.",
+  "I thrive at the intersection of engineering, analytics, and automation — building intelligent platforms and workflows that solve real business problems. From working on RAG pipelines for AI-CFO automation software to developing a self-hosted AI Personal Agent using n8n, Google Gemini, PostgreSQL, and Slack, I focus on connecting AI with real-world tools to automate tasks, manage information, and improve productivity.",
+  "Beyond technical work, I'm an active leader — co-heading major events like the IPL Auction at Prakarsh'25 (150+ participants) and the BuzzTech startup event at SVIT. I believe great technology is built by collaborative teams with a shared vision for impact.",
 ];
 
 export const education = [
   {
     degree: "Bachelor of Engineering – Information Technology",
     institution: "Sardar Vallabhbhai Patel Institute Of Technology (SVIT), Vasad",
-    cgpa: "9.00",
+    cgpa: "9.15",
     year: "Aug 2022 – Jun 2026",
     highlights: [
       "Specializing in AI/ML, Data Science & Analytics, and Backend Systems",
@@ -95,6 +95,7 @@ export const skillCategories = [
       "RAG Pipelines",
       "Prompt Engineering",
       "EDA",
+      "AI Automation",
     ],
   },
   {
@@ -129,7 +130,7 @@ export const skillCategories = [
     title: "Cloud / Dev Tools",
     icon: "Cloud",
     proficiency: 75,
-    skills: ["Git", "GitHub", "Vercel", "Redis", "Firebase", "Clerk Auth", "Upstash Vector"],
+    skills: ["Git", "GitHub", "Vercel", "Redis", "Firebase", "Clerk Auth", "Upstash Vector", "n8n"],
   },
   {
     title: "Analytics & Business",
@@ -196,6 +197,62 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    slug: "ai-personal-agent",
+    title: "AI Personal Agent & Automation System",
+    tagline: "Self-Hosted Executive AI Assistant",
+    description: "A self-hosted AI executive assistant built with n8n and Google Gemini. It uses Slack for natural-language interaction and automates calendar, email, expenses, notes, tasks, web search, and productivity workflows.",
+    longDescription: "Designed and developed a modular personal AI assistant capable of understanding natural-language requests and executing multi-step actions through connected services. The system uses Google Gemini for reasoning and tool selection, PostgreSQL for persistent conversational memory, Slack as the user interface, and n8n as the workflow orchestration layer. Implemented integrations with Google Calendar, Gmail, Google Sheets, Google Docs, Google Tasks, and SerpAPI. Configured Docker-based infrastructure, Cloudflare Tunnel secure webhooks, timezone-aware scheduling, confirmation flows, and safeguards against duplicate Slack responses.",
+    problem: "Managing daily workflows across emails, calendars, tasks, and notes requires constant context switching. Existing AI assistants lack the deep integrations needed to actively perform complex, multi-step actions across personal accounts without compromising privacy or incurring high SaaS costs.",
+    solution: "Developed a self-hosted AI automation system using n8n and Google Gemini. It connects directly to personal APIs (Google Workspace, Slack) to execute actions like email drafting, calendar scheduling, and expense tracking from a single conversational interface, all while maintaining persistent memory in PostgreSQL.",
+    impact: "Centralized daily operations into a single conversational interface, saving hours of manual context-switching and tool management. Proved the viability of scalable, self-hosted AI orchestration over expensive SaaS alternatives.",
+    features: [
+      "Natural-language Slack assistant",
+      "Persistent PostgreSQL conversation memory",
+      "Calendar creation, lookup, and updates",
+      "Gmail retrieval and email sending",
+      "Expense tracking through Google Sheets",
+      "Notes and document management",
+      "Task management",
+      "Google web search integration",
+      "Multi-step AI-powered automation",
+      "Asia/Kolkata timezone support",
+      "Cloudflare-secured external webhook access",
+      "Docker-based self-hosted deployment",
+      "Slack bot-loop prevention",
+      "Confirmation handling for important actions"
+    ],
+    techStack: [
+      "n8n",
+      "Google Gemini API",
+      "PostgreSQL",
+      "Docker Desktop",
+      "Slack API",
+      "Google Calendar API",
+      "Gmail API",
+      "Google Sheets API",
+      "Google Docs API",
+      "Google Tasks API",
+      "SerpAPI",
+      "Cloudflare Tunnel"
+    ],
+    github: "https://github.com/harshil1876/AI-Personal-Agent-Automation-System",
+    live: "",
+    heroImage: "/assets/projects/ai-personal-agent-automation system/PA-1.png",
+    gallery: [
+      "/assets/projects/ai-personal-agent-automation system/PA-1.png",
+      "/assets/projects/ai-personal-agent-automation system/PA-2.png",
+      "/assets/projects/ai-personal-agent-automation system/PA-3.png"
+    ],
+    architectureImage: "/assets/projects/ai-personal-agent-automation system/AI Personal Agent Automation Architecture.png",
+    lessonsLearned: [
+      "Self-hosting AI orchestration with n8n and Docker requires careful webhook and tunnel configurations for secure external access.",
+      "Managing conversational memory in PostgreSQL enables deep context continuity across disparate workflows.",
+      "Connecting multiple third-party APIs requires robust error handling and user confirmation flows to prevent unintended actions.",
+      "Using Slack as a UI provides a seamless, highly accessible way to interact with complex backend automations."
+    ],
+    category: "AI & Automation"
+  },
   {
     slug: "ai-cfo",
     title: "AI-CFO – Automation Software Platform",
@@ -746,14 +803,12 @@ export const testimonials = [
 
 export const navLinks = [
   { label: "Profile", href: "/#profile" },
-  { label: "Journey", href: "/#journey" },
   { label: "Showcase", href: "/#showcase" },
   { label: "Contact", href: "/#contact" },
 ];
 
 export const commandActions = [
   { label: "Home / Profile", href: "/#profile", icon: "Layers" },
-  { label: "Home / Journey", href: "/#journey", icon: "Layers" },
   { label: "Home / Showcase", href: "/#showcase", icon: "Layers" },
   { label: "View Resume", href: "/resume", icon: "FileText" },
   { label: "Download Resume", href: "/assets/resume/Harshil Resume.pdf", icon: "Download" },
@@ -770,108 +825,4 @@ export const commandActions = [
     href: `/certifications/${c.slug}`,
     icon: "Certificate",
   })),
-];
-
-// Phase 3: Interactive Timeline Data
-export interface JourneyMilestone {
-  date: string;
-  title: string;
-  description: string;
-  icon: "GraduationCap" | "Code" | "Award" | "Briefcase" | "Certificate" | "Baby";
-  type: "education" | "project" | "achievement" | "certification" | "experience" | "birth";
-  isMainCheckpoint?: boolean;
-  roadPosition?: number; // Manual entry for 0.0 to 1.0 (relative to path after padding)
-}
-
-export const journeyMilestones: JourneyMilestone[] = [
-  {
-    date: "2004",
-    title: "The Beginning",
-    description: "Born and started the journey of a lifetime.",
-    icon: "Baby",
-    type: "birth",
-    isMainCheckpoint: true,
-    roadPosition: 0.00
-  },
-  {
-    date: "Jun 2008",
-    title: "Primary School",
-    description: "Started my Schooling journey at ST. Kabir School. Built the literal foundations with active participation in extracurricular activities.",
-    icon: "GraduationCap",
-    type: "education",
-    isMainCheckpoint: true,
-    roadPosition: 0.15
-  },
-  {
-    date: "Apr 2018",
-    title: "Secondary School",
-    description: "Started Secondary Schooling at ST. Kabir School with Foundational sciences and mathematics coursework along with other academic subjects.",
-    icon: "GraduationCap",
-    type: "education",
-    isMainCheckpoint: true,
-    roadPosition: 0.5
-  },
-  {
-    date: "Apr 2020",
-    title: "Higher Secondary",
-    description: "Started Higher Secondary Schooling at Parth School of Science with Science stream (PCM & Computer Science).",
-    icon: "GraduationCap",
-    type: "education",
-    isMainCheckpoint: true,
-    roadPosition: 0.65
-  },
-  {
-    date: "Aug 2022",
-    title: "B.E. at SVIT Vasad",
-    description: "Started my journey in Information Technology, focusing on coding fundamentals and problem-solving at SVIT Vasad.",
-    icon: "GraduationCap",
-    type: "education",
-    isMainCheckpoint: true,
-    roadPosition: 0.80
-  },
-  {
-    date: "Feb 2024",
-    title: "Google IT Support Certification",
-    description: "Completed the Specialized 5-course Google certification covering networking, security, and systems.",
-    icon: "Certificate",
-    type: "certification",
-    isMainCheckpoint: false,
-    roadPosition: 0.90
-  },
-   {
-    date: "Jun 2024",
-    title: "Google Python Automation",
-    description: "Mastered python scripting, Git/GitHub, and cloud automation across a specialized 6-course Google curriculum.",
-    icon: "Certificate",
-    type: "certification",
-    isMainCheckpoint: false,
-    roadPosition: 0.97
-  },
-  {
-    date: "Sep 2024",
-    title: "Won MECIA Hacks 2.0",
-    description: "Built the initial prototype of HealthVitals-AI and won 1st place in the 24-hour hackathon among 100+ teams.",
-    icon: "Award",
-    type: "achievement",
-    isMainCheckpoint: false,
-    roadPosition: 1.04
-  },
-  {
-    date: "May 2025",
-    title: "Secured ₹50K SSIP Grant",
-    description: "Awarded government funding to scale HealthVitals-AI into a production-ready mobile platform.",
-    icon: "Award",
-    type: "achievement",
-    isMainCheckpoint: false,
-    roadPosition: 1.11
-  },
-  {
-    date: "Feb 2026",
-    title: "Started at GACL",
-    description: "Joined Gujarat Alkalies and Chemicals Ltd. as an IT Intern to build the AI-CFO financial analytics platform.",
-    icon: "Briefcase",
-    type: "experience",
-    isMainCheckpoint: true,
-    roadPosition: 1.20
-  }
 ];

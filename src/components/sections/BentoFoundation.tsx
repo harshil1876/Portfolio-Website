@@ -348,9 +348,9 @@ export function BentoFoundation() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {[
-                    "Python", "SQL", "C", "Machine Learning", "Data Analytics", 
+                    "Python", "SQL", "Machine Learning", "AI Automation", "n8n",
                     "Data Visualization", "RAG Pipelines", "Prompt Engineering", 
-                    "EDA", "Django", "Flask", "LangChain"
+                    "Django", "LangChain"
                   ].map((skill, idx) => (
                     <span 
                       key={idx}
